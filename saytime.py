@@ -97,6 +97,7 @@ class saytime(numwords):
         m = self._min
         
         if h > 23: return self._oor     # OOR errors
+        if m > 48: return self._oor
         if m > 59: return self._oor
 
         sign = self._specials['past']        
